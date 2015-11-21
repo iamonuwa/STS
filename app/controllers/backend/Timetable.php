@@ -22,9 +22,6 @@ class Timetable extends Backend_Controller {
 			$data['date_created'] = time();
 			$data['course'] = $this->courses_model->get_all();
 			$data['rooms'] = $this->room_model->get_all();
-			// $data['output'] = $this->parse($data);
-
-			dump($this->algorithm->parse($data));
 		}
 		else{
 		$this->template->add_title_segment('Timetable Module');
