@@ -34,8 +34,8 @@ $route['test'] 													= 'test/index';
 $route['backend/(:any)/settings/backup'] 						= 'backend/home/webapp/index';
 $route['backend/(:any)/accounts'] 								= 'backend/home/account/index';
 
-$route['api/timetable']											= 'api/timetable';
-$route['api/timetable/(:num)'] 									= 'api/timetable/id/$1'; 
+$route['api/v1']												= 'api/v1';
+$route['api/v1/(:num)'] 										= 'api/v1/id/$1'; 
 
 $route['backend/(:any)/timetable']								= 'backend/timetable/index';
 

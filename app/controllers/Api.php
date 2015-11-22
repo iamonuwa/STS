@@ -7,13 +7,13 @@ class Api extends REST_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('building_model');
+		$this->load->model('timetable_model');
 	}
 
 	public function timetable_get()
 	{
 		$bid = $this->uri->segment(4);
-		$timetable = $this->building_model->get_all();
+		$timetable = $this->timetable_model->get_all();
 
 		 if ($bid === NULL)
 		        {
@@ -34,7 +34,7 @@ class Api extends REST_Controller {
 		        }
 		     // Find and return a single record for a particular timetables.
 
-		$id = $this->building_model->get_by(array('id' => $bid));
+		$id = $this->timetable_model->get_by(array('id' => $bid));
 		// var_dump($id);
         // $id = (int) $id;
 
