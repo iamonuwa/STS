@@ -51,8 +51,8 @@ $this->load->view('themes/sidebar');
                             <td id="level_size">'.$value->class_size.'</td>
                             <td>'.$value->last_update.'</td>
                            <td> <a href="'.base_url('backend/'.$this->aauth->get_user()->name.'/classes/preview/'.$value->id).'" class="btn btn-sm btn-info btn-flat"> <i class="fa fa-eye"></i> '.$this->lang->line('preview').'</a> </td>';
-                             endforeach; ?>
-                      </tr>
+                             endforeach;
+                      echo '</tr>'; ?>
                     </tbody>
                   </table>
                 </div>

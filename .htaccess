@@ -2,10 +2,10 @@ RewriteEngine on
 
 # Redirect non-www to www 
 #RewriteCond %{HTTP_HOST} !^www\. 
-#RewriteRule (.*) http://localhost/project/$1 [R=301,L]
+#RewriteRule (.*) http://localhost/sts/$1 [R=301,L]
 
-#RewriteRule ^index$		http://localhost/project/ [R=301,L]
-#RewriteRule ^sitemap.xml.gz$	http://localhost/project/main/generate_xml_sitemap/ [QSA,L]
+#RewriteRule ^index$		http://localhost/sts/ [R=301,L]
+#RewriteRule ^sitemap.xml.gz$	http://localhost/sts/main/generate_xml_sitemap/ [QSA,L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
