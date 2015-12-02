@@ -7,16 +7,21 @@ class Api extends REST_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('room_model');
+		$this->load->model('classes_model');
 	}
 
     public function timetable_get()
     {
+        $day = $this->get('day');
+
         $param = $this->get('id');
 
-        $data_by = $this->room_model->get_by(array('id'=>$param));
+        $data_by = $this->classes_model->get_by(array(
+            'id'=>$param
+            // 'day'=>$day
+            ));
 
-        $data = $this->room_model->get_all();
+        $data = $this->classes_model->get_all();
 
         if ($param === NULL) {
 
