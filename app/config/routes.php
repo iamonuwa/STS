@@ -1,8 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-// $route['api/timetable/(:num)'] 									= 'backend/api/timetable/id/$1'; 
-// $route['api/timetable/(:num)(\.)([a-zA-Z0-9_-]+)(.*)'] 			= 'backend/api/timetable/id/$1/format/$3$4'; 
+$route['api/example/timetable/(:num)'] 							= 'api/timetable/id/$1'; // Example 4
+$route['api/example/timetable/(:num)(\.)([a-zA-Z0-9_-]+)(.*)'] 	= 'api/timetable/id/$1/format/$3$4'; // Example 8
 
 $route['backend/(:any)/building'] 								= 'backend/building/index';
 $route['backend/(:any)/building/preview/(:num)']				= 'backend/building/edit/$1';

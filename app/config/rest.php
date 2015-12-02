@@ -14,7 +14,7 @@ $config['force_https'] = FALSE;
 
 /*
 |--------------------------------------------------------------------------
-| REST Format
+| REST Output Format
 |--------------------------------------------------------------------------
 |
 | The default format of the response
@@ -30,6 +30,29 @@ $config['force_https'] = FALSE;
 |
 */
 $config['rest_default_format'] = 'json';
+
+/*
+|--------------------------------------------------------------------------
+| REST Supported Output Formats
+|--------------------------------------------------------------------------
+|
+| The following setting contains a list of the supported/allowed formats.
+| You may remove those formats that you don't want to use.
+| If the default format $config['rest_default_format'] is missing within
+| $config['rest_supported_formats'], it will be added silently during
+| REST_Controller initialization.
+|
+*/
+$config['rest_supported_formats'] = [
+    'json',
+    'array',
+    'csv',
+    'html',
+    'jsonp',
+    'php',
+    'serialized',
+    'xml',
+];
 
 /*
 |--------------------------------------------------------------------------
@@ -71,7 +94,7 @@ $config['enable_emulate_request'] = TRUE;
 | e.g: My Secret REST API
 |
 */
-$config['rest_realm'] = 'TIMETABLE REST API';
+$config['rest_realm'] = 'REST API';
 
 /*
 |--------------------------------------------------------------------------
@@ -254,7 +277,7 @@ $config['rest_database_group'] = 'default';
 | The table name in your database that stores API keys
 |
 */
-$config['rest_keys_table'] = 'project_rest_keys';
+$config['rest_keys_table'] = 'keys';
 
 /*
 |--------------------------------------------------------------------------
@@ -357,7 +380,7 @@ $config['rest_key_name'] = 'X-API-KEY';
 |   ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 |
 */
-$config['rest_enable_logging'] = TRUE;
+$config['rest_enable_logging'] = FALSE;
 
 /*
 |--------------------------------------------------------------------------
@@ -368,7 +391,7 @@ $config['rest_enable_logging'] = TRUE;
 | table name to match e.g. my_logs
 |
 */
-$config['rest_logs_table'] = 'project_rest_logs';
+$config['rest_logs_table'] = 'logs';
 
 /*
 |--------------------------------------------------------------------------
