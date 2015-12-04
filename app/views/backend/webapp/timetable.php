@@ -115,6 +115,16 @@ $this->load->view('themes/sidebar');
                       <span class="glyphicon glyphicon-calendar form-control-feedback"></span>
                   </div>
                   </div>
+                  <div class="col-xs-4">
+                  <div class="form-group has-feedback">
+                   <label>Level: </label>
+                  <select name="level">
+                  <?php foreach($classes as $key => $value): 
+                    echo '<option class="form-control" value="'.$value->id.'">'.$value->name.'</option>';
+                  endforeach;?>
+                  </select>
+                  </div>
+                  </div>
                   </div>
                   </div>
                  <div class="modal-footer">
